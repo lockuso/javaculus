@@ -1,6 +1,6 @@
 package com.lock.javaculus.calculus;
 
-import com.lock.javaculus.types.terms.Term;
+import com.lock.javaculus.types.terms.*;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,24 @@ public class EquationDerivative {
             double newPower = term.getPower() - 1;
             double newCount = term.getCount() * term.getPower();
 
-            Term newTerm = new Term(newCount, newPower);
+            Term newTerm;
+
+            // calculate the derivatives of special terms like sin or cos
+            // TODO: add derivatives of other terms like tan, sec and cot
+            // TODO: add powers to trigonometric terms.
+
+            if (term instanceof SinTerm) {
+                newTerm = new CosTerm(newCount);
+            } else if (term instanceof CosTerm) {
+                newTerm = new SinTerm(-newCount);
+            } else if (term instanceof SinhTerm) {
+                newTerm = new CoshTerm(newCount);
+            } else if (term instanceof CoshTerm) {
+                newTerm = new SinhTerm(newCount);
+            } else {
+                newTerm = new Term(newCount, newPower);
+            }
+
             newTerms.add(newTerm);
         }
 

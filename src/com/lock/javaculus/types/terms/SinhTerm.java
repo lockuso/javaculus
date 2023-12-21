@@ -1,8 +1,8 @@
 package com.lock.javaculus.types.terms;
 
 public class SinhTerm extends Term {
-    public SinhTerm(double count, double power) {
-        super(count, power);
+    public SinhTerm(double count) {
+        super(count, 1);
     }
 
     @Override

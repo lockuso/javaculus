@@ -4,8 +4,8 @@ import com.lock.javaculus.types.terms.Term;
 
 public class CosTerm extends Term {
 
-    public CosTerm(double count, double power) {
-        super(count, power);
+    public CosTerm(double count) {
+        super(count, 1);
     }
 
     @Override

@@ -1,8 +1,9 @@
 package com.lock.javaculus.types.terms;
 
 public class CoshTerm extends Term {
-    public CoshTerm(double count, double power) {
-        super(count, power);
+    // TODO: add powers to these.
+    public CoshTerm(double count) {
+        super(count, 1);
     }
 
     @Override

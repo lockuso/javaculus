@@ -37,6 +37,12 @@ public class Equation {
         return this;
     }
 
+    public Equation addTerm(Term term) {
+        this.terms.add(term);
+
+        return this;
+    }
+
     public String asString() {
         StringBuilder sb = new StringBuilder();
 

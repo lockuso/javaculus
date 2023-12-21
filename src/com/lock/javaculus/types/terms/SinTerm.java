@@ -3,8 +3,8 @@ package com.lock.javaculus.types.terms;
 import com.lock.javaculus.types.terms.Term;
 
 public class SinTerm extends Term {
-    public SinTerm(double count, double power) {
-        super(count, power);
+    public SinTerm(double count) {
+        super(count, 1);
     }
 
     @Override
