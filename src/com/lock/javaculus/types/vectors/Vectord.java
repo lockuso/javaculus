@@ -50,4 +50,18 @@ public class Vectord {
             this.values[i] *= scalar;
         }
     }
+
+    public double dot(Vectord other) throws Exception {
+        if (other.getVectorLength() != getVectorLength()) {
+            throw new Exception("Vectors need to be the same length");
+        }
+
+        double product = 0;
+
+        for (int i = 0; i < getVectorLength(); i++) {
+            product += other.getValue(i) * getValue(i);
+        }
+
+        return product;
+    }
 }

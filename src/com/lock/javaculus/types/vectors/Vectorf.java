@@ -50,4 +50,18 @@ public class Vectorf {
             this.values[i] *= scalar;
         }
     }
+
+    public float dot(Vectorf other) throws Exception {
+        if (other.getVectorLength() != getVectorLength()) {
+            throw new Exception("Vectors need to be the same length");
+        }
+
+        float product = 0;
+
+        for (int i = 0; i < getVectorLength(); i++) {
+            product += other.getValue(i) * getValue(i);
+        }
+
+        return product;
+    }
 }
