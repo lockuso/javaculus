@@ -10,8 +10,6 @@ public class Summation {
             }
 
             return total;
-        } else if (startIndex == finalIndex) {
-            return function.fun(startIndex);
         }
 
         double total = 0d;
@@ -32,8 +30,6 @@ public class Summation {
             }
 
             return total;
-        } else if (startIndex == finalIndex) {
-            return equation.calculateEquation(startIndex);
         }
 
         double total = 0d;
