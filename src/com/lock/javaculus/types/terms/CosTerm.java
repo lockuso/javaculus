@@ -7,6 +7,9 @@ public class CosTerm extends Term {
     public CosTerm(double count) {
         super(count, 1);
     }
+    public CosTerm(double count, double power) {
+        super(count, power);
+    }
 
     @Override
     public double calculateTerm(double x) {

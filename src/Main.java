@@ -20,12 +20,12 @@ public class Main {
     public static void main(String[] args) {
         Equation equation = new Equation();
 
-        equation.addTerm(new SinTerm(2));
+        equation.addTerm(new SinTerm(1, -1));
 
         EquationDerivative derivative = new EquationDerivative(equation);
 
         Equation deriv = derivative.getDerivativeEquation();
 
-        System.out.println(deriv.calculateEquation(0));
+        System.out.println(deriv.calculateEquation(Math.PI / 4));
     }
 }

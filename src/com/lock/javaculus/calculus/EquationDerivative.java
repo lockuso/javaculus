@@ -26,9 +26,9 @@ public class EquationDerivative {
             // TODO: add powers to trigonometric terms.
 
             if (term instanceof SinTerm) {
-                newTerm = new CosTerm(newCount);
+                newTerm = TrigTerm.sinPowerDerivative(term.getCount(), term.getPower());
             } else if (term instanceof CosTerm) {
-                newTerm = new SinTerm(-newCount);
+                newTerm = TrigTerm.cosPowerDerivative(term.getCount(), term.getPower());
             } else if (term instanceof SinhTerm) {
                 newTerm = new CoshTerm(newCount);
             } else if (term instanceof CoshTerm) {

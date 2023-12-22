@@ -7,6 +7,10 @@ public class SinTerm extends Term {
         super(count, 1);
     }
 
+    public SinTerm(double count, double power) {
+        super(count, power);
+    }
+
     @Override
     public double calculateTerm(double x) {
         return getCount() * Math.pow(Math.sin(x), getPower());
