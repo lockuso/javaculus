@@ -1,9 +1,5 @@
 package com.lock.javaculus.types.complex;
 
-import com.lock.javaculus.types.vectors.Vector2d;
-import com.lock.javaculus.types.vectors.Vector2f;
-import com.lock.javaculus.types.vectors.Vector2i;
-
 public class ComplexNumber {
     // number with form a + ib
 
@@ -52,21 +48,6 @@ public class ComplexNumber {
         imaginaryComponent += complexNumber.getImaginaryComponent();
     }
 
-    public void addv2d(Vector2d vector) {
-        realComponent += vector.getX();
-        imaginaryComponent += vector.getY();
-    }
-
-    public void addv2f(Vector2f vector) {
-        realComponent += (double) vector.getX();
-        imaginaryComponent += (double) vector.getY();
-    }
-
-    public void addv2i(Vector2i vector) {
-        realComponent += vector.getX();
-        imaginaryComponent += vector.getY();
-    }
-
     public void mul1d(double realNumber) {
         realComponent *= realNumber;
         imaginaryComponent *= realNumber;
@@ -91,23 +72,5 @@ public class ComplexNumber {
 
         realComponent = c1.getRealComponent();
         imaginaryComponent = c2.getImaginaryComponent();
-    }
-
-    public void mulv2d(Vector2d vector) {
-        ComplexNumber c1 = new ComplexNumber(vector.getX(), vector.getY());
-
-        mul1c(c1);
-    }
-
-    public void mulv2f(Vector2f vector) {
-        ComplexNumber c1 = new ComplexNumber(vector.getX(), vector.getY());
-
-        mul1c(c1);
-    }
-
-    public void mulv2i(Vector2i vector) {
-        ComplexNumber c1 = new ComplexNumber(vector.getX(), vector.getY());
-
-        mul1c(c1);
     }
 }
